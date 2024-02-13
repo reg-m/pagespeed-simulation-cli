@@ -23,7 +23,7 @@ The approximate hardware difference between the pagespeed and a M3 Pro processor
 ```
 # Adds 10 to slowdown
 mobile_slowdown=14
-desktop_slowdown=11
+desktop_slowdown=10
 ```
 
 The lighthouse scores become similar to Pagespeed
