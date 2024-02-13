@@ -21,8 +21,8 @@ Pagespeed uses a simulated slowdown of 4x for mobile tests, and no slowdown for 
 The approximate hardware difference between the pagespeed and a M3 Pro processor is near 10x so by adjusting the config to:
 
 ```
-#Adds 10 to slowdown
-mobile_slowdown=15 
+# Adds 10 to slowdown
+mobile_slowdown=14
 desktop_slowdown=11
 ```
 
