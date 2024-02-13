@@ -7,11 +7,11 @@ Requirements:
 
 Run lighthouse test for Mobile:
 
-`bash lh nespresso`
+`bash performance nespresso`
 
 Run lighthouse test for Desktop:
 
-`bash lh nespresso -desktop`
+`bash performance nespresso -desktop`
 
 ## Simulated Slowdown
 
