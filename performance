@@ -1,0 +1,37 @@
+#!/bin/bash
+
+declare -A sites
+declare -A blocked_patterns
+source ./configs/config.cfg
+
+# Make sure we have the project in config.cfg
+project=$1
+site=${sites[$1]}
+
+# Set Mobile|Desktop modes
+# mobile is default, no param needed
+configPath="./configs/mobile.json"
+media="mobile"
+slowdown=${mobile_slowdown}
+if [ "$2" = "desktop" ]
+    then
+        configPath="./configs/desktop.json"
+        media="desktop"
+        slowdown=${desktop_slowdown}
+fi
+
+blocked_str=""
+for asset in ${!blocked_patterns[@]}; do
+    blocked_str+=" --blocked-url-patterns=\"$asset\" "
+done
+
+# If it fails here, make sure lighthouse npm package is
+# installed and node version meets requirements
+lighthouse ${site} \
+    --config-path=${configPath} \
+    --chrome-flags="--headless" \
+    --output-path=./reports/report-${project}-${media}-$(date +%s).html \
+    --chrome-flags='--ignore-certificate-errors' \
+    --throttling.cpuSlowdownMultiplier=${slowdown} \
+    ${blocked_str} \
+    --view

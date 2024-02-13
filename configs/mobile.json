@@ -1,0 +1,25 @@
+{
+    "extends": "lighthouse:default",
+    "settings": {
+        "onlyCategories": [
+            "performance"
+        ],
+        "channel": "lr",
+        "formFactor": "mobile",
+        "locale": "en-US",
+        "screenEmulation": {
+            "deviceScaleFactor": 1.75,
+            "height": 823,
+            "mobile": true,
+            "width": 412
+        },
+        "throttling": {
+            "downloadThroughputKbps": 1474.5600000000002,
+            "requestLatencyMs": 562.5,
+            "rttMs": 150,
+            "throughputKbps": 1638.4,
+            "uploadThroughputKbps": 675
+        },
+        "throttlingMethod": "simulate"
+    }
+}

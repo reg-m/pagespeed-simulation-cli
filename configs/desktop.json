@@ -1,0 +1,22 @@
+{
+    "extends": "lighthouse:default",
+    "settings": {
+        "onlyCategories": [
+            "performance"
+        ],
+        "channel": "lr",
+        "formFactor": "desktop",
+        "locale": "en-US",
+        "screenEmulation": {
+            "deviceScaleFactor": 1,
+            "height": 940,
+            "width": 1350,
+            "mobile": false
+        },
+        "throttling": {
+            "rttMs": 40,
+            "throughputKbps": 10240
+        },
+        "throttlingMethod": "simulate"
+    }
+}
