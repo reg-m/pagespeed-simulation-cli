@@ -5,17 +5,23 @@ Requirements:
 - node > 18
 - lighthouse cli `npm install -g lighthouse`
 
-Run lighthouse test for Mobile:
+Copy `example_project.cfg` configuration file in `./config`, rename and change settings
 
-`bash performance google_store`
+## Run lighthouse test for Mobile:
 
-Run lighthouse test for Desktop:
+`bash performance example_project`
+or
+`npm run performance example_project`
 
-`bash performance google_store desktop`
+## Run lighthouse test for Desktop:
+
+`bash performance example_project desktop`
+or
+`npm run performance example_project desktop`
 
 ## Simulated Slowdown
 
-Tweak the slowdown in `config/config.cfg`.
+Tweak slowdown factor in `config/{project}.cfg`.
 Pagespeed uses a simulated slowdown of 4x for mobile tests, and no slowdown for desktop.
 
 The approximate hardware difference between the pagespeed and a M3 Pro processor is near 10x so by adjusting the config to:

@@ -1,12 +1,13 @@
 #!/bin/bash
 
-declare -A sites
 declare -A blocked_patterns
-source ./configs/config.cfg
 
-# Make sure we have the project in config.cfg
-project=$1
-site=${sites[$1]}
+if [ -f ./configs/${1}.cfg ]; then
+    source ./configs/${1}.cfg
+else
+    echo -e "\033[1;31m ./configs/${1}.cfg not found!"
+    exit 1
+fi
 
 # Set Mobile|Desktop modes
 # mobile is default, no param needed
@@ -30,7 +31,7 @@ done
 lighthouse ${site} \
     --config-path=${configPath} \
     --chrome-flags="--headless" \
-    --output-path=./reports/report-${project}-${media}-$(date +%s).html \
+    --output-path=./reports/report-${1}-${media}-$(date +%s).html \
     --chrome-flags='--ignore-certificate-errors' \
     --throttling.cpuSlowdownMultiplier=${slowdown} \
     ${blocked_str} \

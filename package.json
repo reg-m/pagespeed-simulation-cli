@@ -1,0 +1,15 @@
+{
+  "name": "pagespeed-simulation-cli",
+  "version": "1.0.0",
+  "description": "Requirements:",
+  "scripts": {
+    "performance": "bash performance"
+  },
+  "keywords": [],
+  "author": "reg-m",
+  "homepage": "https://github.com/reg-m",
+  "license": "ISC",
+  "dependencies": {
+    "lighthouse": "^12.0.0"
+  }
+}
