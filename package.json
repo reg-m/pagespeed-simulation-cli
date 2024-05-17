@@ -1,7 +1,7 @@
 {
   "name": "pagespeed-simulation-cli",
   "version": "1.0.0",
-  "description": "Requirements:",
+  "description": "Bash script for automating on demand lighthouse reports",
   "scripts": {
     "performance": "bash performance"
   },
