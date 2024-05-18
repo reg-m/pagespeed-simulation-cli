@@ -6,7 +6,7 @@ Requirements:
 
 #### Instructions:
 
-- `npm install`
+- `npm install -g lighthouse`
 - Copy `example_project.cfg` configuration file in `./config`, rename and change settings
 
 ## Run lighthouse test for Mobile:
