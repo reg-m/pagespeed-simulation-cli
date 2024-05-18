@@ -6,7 +6,7 @@ Requirements:
 
 #### Instructions:
 
-- `npm install -g lighthouse`
+- [`npm install -g lighthouse`]([https://github.com/GoogleChrome/lighthouse](https://github.com/GoogleChrome/lighthouse?tab=readme-ov-file#using-the-node-cli))
 - Copy `example_project.cfg` configuration file in `./config`, rename and change settings
 
 ## Run lighthouse test for Mobile:
