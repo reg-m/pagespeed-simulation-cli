@@ -1,6 +1,15 @@
 # Lighthouse Custom Configuration
 
-Requirements:
+Attempts to mimic Pagespeed Lab tests by setting machine specific slowdown settings, allowing easy calibration.
+
+**Other features:**
+
+- Project configurations ( config folder )
+- Block static resources with the `blocked_patterns` setting ( example Analytics, Trackers, etc )
+- Reports are saved in the *reports* folder
+- Auto Calibration ( WIP )
+
+**Requirements:**
 
 - Lighthouse requires Node 18 LTS (18.x) or later.
 
