@@ -2,24 +2,19 @@
 
 Requirements:
 
-- node > 18
+- Lighthouse requires Node 18 LTS (18.x) or later.
 
 #### Instructions:
 
-- [`npm install -g lighthouse`](https://github.com/GoogleChrome/lighthouse?tab=readme-ov-file#using-the-node-cli)
 - Copy `example_project.cfg` configuration file in `./config`, rename and change settings
 
 ## Run lighthouse test for Mobile:
 
 `bash performance example_project`
-or
-`npm run performance example_project`
 
 ## Run lighthouse test for Desktop:
 
 `bash performance example_project desktop`
-or
-`npm run performance example_project desktop`
 
 ## Simulated Slowdown
 

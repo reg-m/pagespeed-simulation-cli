@@ -1,6 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-declare -A blocked_patterns
+if ! command -v npx &> /dev/null
+then
+    echo -e "\033[1;31m Please install Node JS version 18 or Higher."
+    exit 1
+fi
+
+declare -a blocked_patterns=()
 
 if [ -f ./configs/${1}.cfg ]; then
     source ./configs/${1}.cfg
@@ -22,17 +28,18 @@ if [ "$2" = "desktop" ]
 fi
 
 blocked_str=""
-for asset in ${!blocked_patterns[@]}; do
+for asset in ${blocked_patterns[@]}; do
     blocked_str+=" --blocked-url-patterns=\"$asset\" "
 done
 
 # If it fails here, make sure lighthouse npm package is
 # installed and node version meets requirements
-lighthouse ${site} \
+npx lighthouse ${site} \
     --config-path=${configPath} \
     --chrome-flags="--headless" \
     --output-path=./reports/report-${1}-${media}-$(date +%s).html \
     --chrome-flags='--ignore-certificate-errors' \
     --throttling.cpuSlowdownMultiplier=${slowdown} \
+    --disable-gpu \
     ${blocked_str} \
     --view
