@@ -1,6 +1,6 @@
-# Lighthouse Custom Configuration
+# Pagespeed Lab Test Simulator
 
-Attempts to mimic Pagespeed Lab tests by setting machine specific slowdown settings, allowing easy calibration.
+Attempts to mimic Pagespeed Lab tests (lighthouse section) by setting machine specific slowdown settings, allowing easy calibration.
 
 **Other features:**
 
@@ -11,7 +11,7 @@ Attempts to mimic Pagespeed Lab tests by setting machine specific slowdown setti
 
 **Requirements:**
 
-- Lighthouse requires Node 18 LTS (18.x) or later.
+- Google Lighthouse requires Node 18 LTS (18.x) or later.
 
 #### Instructions:
 
